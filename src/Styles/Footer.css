@@ -1,0 +1,33 @@
+/* Footer.css */
+
+/* Style for the footer container */
+.footer {
+    background-color: #ffffff;
+    /* White background */
+    padding: 20px;
+    /* Add padding around the footer */
+    display: flex;
+    justify-content: center;
+    /* Center logos horizontally */
+    align-items: center;
+    /* Vertically center logos */
+    gap: 100px;
+    /* Space between logos */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for each logo image */
+.footer img {
+    max-height: 40px;
+    /* Limit the height of the logos */
+    width: auto;
+    /* Ensure the aspect ratio is maintained */
+    transition: transform 0.3s ease-in-out;
+    /* Apply scaling transition */
+}
+
+/* Add a smooth scaling effect on hover */
+.footer img:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge the logo on hover */
+}

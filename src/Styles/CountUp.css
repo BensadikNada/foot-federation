@@ -1,0 +1,31 @@
+.timer-container {
+  display: flex;
+  justify-content: space-between; /* Space between the button and timer */
+  align-items: center; /* Align items vertically in the center */
+  padding: 0 100px; /* Add some padding on left and right */
+}
+
+.timer {
+  text-align: right; /* Align the timer text to the right */
+  font-size: 60px;
+  color: #DCAC3C;
+  font-family: 'Arial', sans-serif;
+}
+
+.start-pause-btn {
+  font-size: 60px; /* Same font size as the timer */
+  color: #DCAC3C;  /* Same text color as the timer */
+  background-color: transparent; /* Make the background transparent */
+  border: none;   /* Remove the border */
+  cursor: pointer; /* Add pointer cursor */
+  font-family: 'Arial', sans-serif; /* Same font as the timer */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.start-pause-btn:hover {
+  color: #f4c23d; /* Change color when hovered */
+}
+
+.start-pause-btn:active {
+  color: #c0972b; /* Darker color on click */
+}

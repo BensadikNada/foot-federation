@@ -1,0 +1,38 @@
+/* Main.css */
+
+/* Set the overall background to dark red */
+.container {
+    background-color: #340303; /* Dark Red */
+    color: #fff; /* White text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height of the viewport */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Style the image */
+  .container img {
+    width: 700px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+  
+  /* Style the paragraph */
+  .container p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px; /* Limit width of the text */
+    margin: 0 auto;
+    
+  }
+  
+  /* Style the span with a light red color */
+  .container p span {
+    color: #bc4141; /* Light Red */
+    font-weight: bold;
+  }
+  

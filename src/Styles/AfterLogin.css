@@ -1,0 +1,32 @@
+body{
+    background-color: #5A0808;
+}
+.team {
+    background-color:#340303 ;
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between elements */
+    padding: 10px; /* Add some padding around the container */
+   margin-left:-70px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .team img {
+
+    object-fit: contain; /* Ensure the images fit within the box without cropping */
+   
+    
+  }
+  
+  
+  .team h4 {
+    font-size: 50px; /* Size for the "VS" text */
+    color: #DCAC3C; /* Text color */
+    font-weight: bold; /* Bold text */
+ margin-left:-60px;
+ margin-right:20px;
+  }
+  .countup{
+    background-color: #340303;
+  }

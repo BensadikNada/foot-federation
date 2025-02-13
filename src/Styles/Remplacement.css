@@ -1,0 +1,109 @@
+.remplacement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 8px;
+    margin-left: 250px;
+    margin-top: 120px;
+}
+
+.goalKeeper {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    padding: 20px;
+    border-radius: 15px;
+    color: #DCAC3C;
+}
+
+.goalKeeper h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border: #DCAC3C solid 2px;
+    padding: 15px 10px;
+    border-radius: 5px;
+    text-align: center; /* Center text within the element */
+}
+
+.goalKeeper-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #DCAC3C;
+    background-color: #340303;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 200px;
+    position: relative;
+}
+
+.goalKeeper-bar {
+    width: 20px;
+    height: 90%;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    border: 2px solid #DCAC3C;
+    border-radius: 10px;
+}
+
+.goalKeeper-performance-bar {
+    position: absolute;
+    width: 16px;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+}
+
+.goalKeeper-info {
+    text-align: center;
+    flex: 1;
+}
+
+.goalKeeper-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #DCAC3C;
+}
+
+.goalKeeper-image-container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.goalKeeper-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.triangle{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.triangle-red {
+    width: 0;
+    height: 0;
+    border-left: 16px solid transparent; /* Reduced width */
+    border-right: 16px solid transparent; /* Reduced width */
+    border-bottom: 16px solid rgb(255, 0, 0); /* Reduced height */
+    margin-bottom: 15px;
+    rotate: 180deg;
+}
+
+.triangle-green {
+    width: 0;
+    height: 0;
+    border-left: 16px solid transparent; /* Reduced width */
+    border-right: 16px solid transparent; /* Reduced width */
+    border-bottom: 16px solid rgb(72, 255, 99); /* Reduced height */
+}

@@ -1,6 +1,7 @@
-body{
-    background-color: #5A0808;
+body {
+  background-color: #5A0808;
 }
+
 .team {
     background-color:#340303 ;
     display: flex; /* Align items horizontally */
@@ -30,3 +31,40 @@ body{
   .countup{
     background-color: #340303;
   }
+  @media screen and (max-width: 768px) {
+    body {
+        background-color: #3A0505; /* Slightly different shade for smaller screens */
+    }
+
+    .team {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 10px; /* Reduce spacing */
+        padding: 15px;
+        margin-left: 0; /* Remove negative margin */
+        text-align: center; /* Center-align text */
+    }
+
+    .team img {
+        max-width: 80%; /* Ensure images scale properly */
+    }
+
+    .team h4 {
+        font-size: 30px; /* Reduce font size */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .countup {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .team h4 {
+        font-size: 25px; /* Further reduce font size */
+    }
+
+    .team img {
+        max-width: 100%;
+    }
+}

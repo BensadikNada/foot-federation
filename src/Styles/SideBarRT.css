@@ -4,7 +4,7 @@
     left: 0; /* Aligns the sidebar to the left side */
     top: 0; /* Starts at the top of the viewport */
     bottom: 0; /* Stretches the sidebar to the bottom of the viewport */
-    width: 250px; /* Fixed width for the sidebar */
+    width: 240px; /* Fixed width for the sidebar */
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Darker, softer shadow for a clean effect */
     background-color: #340303; /* Sidebar background color */
     overflow-y: auto; /* Allows internal scrolling if the content exceeds the sidebar's height */
@@ -61,14 +61,38 @@
     color: #340303;
 }
 
-/* Media query for smaller screens */
+
 @media (max-width: 768px) {
     .sidebar-container {
-        width: 200px;
+        width: 200px; /* Reduce sidebar width */
+        margin-top: 20px; /* Reduce the top margin */
+        padding-top: 10px; /* Adjust padding for smaller screens */
     }
 
     .sidebar ul li a {
-        font-size: 14px;
-        padding: 8px 12px;
+        font-size: 14px; /* Smaller font size for links */
+        padding: 8px 12px; /* Reduce padding for smaller screens */
+        width: 160px; /* Reduce width of the links */
+        margin: 0 auto; /* Keep links centered */
+        border-radius: 30px; /* Adjust border-radius for smaller screens */
+    }
+
+    .sidebar ul li a.active {
+        background-color: #DCAC3C; /* Active link styling */
+        color: #340303;
+        border-color: #340303;
+    }
+
+    .sidebar {
+        padding: 10px; /* Reduce padding in the sidebar */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .sidebar ul {
+        text-align: left; /* Align list items to the left */
+    }
+
+    .sidebar ul li {
+        margin: 8px 0; /* Reduce margin between list items */
     }
 }

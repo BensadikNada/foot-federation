@@ -3,10 +3,9 @@ import '../../Styles/Table.css';
 
 const HistoriqueDataTable = () => {
   const [matchData, setMatchData] = useState([]);
-  const API_URL = import.meta.env.VITE_API_URL || "https://json-file-asil.onrender.com";
 
   useEffect(() => {
-    fetch(`${API_URL}/matches`)
+    fetch('http://localhost:3000/matches')
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -18,8 +17,8 @@ const HistoriqueDataTable = () => {
   }, []);
 
   return (
-    <div className="table-container">
-      <h2 className="table-title">Match Details</h2>
+    <div className="table-container1">
+      <h2 className="table-title1">Match Details</h2>
       <div className='table'>
         <table className="match-table">
           <thead>

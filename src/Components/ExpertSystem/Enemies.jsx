@@ -6,10 +6,9 @@ import SideBarES from "./SideBarES";
 
 export default function Enemies() {
     const [enemy, setEnemy] = useState([]); // Initialize as an empty array
-    const API_URL = import.meta.env.VITE_API_URL || "https://json-file-asil.onrender.com";
 
     useEffect(() => {
-        axios.get(`${API_URL}/enemies`).then((res) => {
+        axios.get('http://localhost:3000/enemies').then((res) => {
             const updatedPlayers = res.data.map((p) => ({
                 ...p,
                 currentHeartRate: 100,
@@ -29,7 +28,7 @@ export default function Enemies() {
                     return { ...p, currentHeartRate: newHeartRate };
                 })
             );
-        }, 20000);
+        }, 2000);
 
         return () => clearInterval(interval);
     }, []);
@@ -46,8 +45,9 @@ export default function Enemies() {
             <SideBarES />
             <div>
                 <ul className="player-instructions">
-                    <li> -GriZman is tired after sprint of 9km put there diaz he can create opportunity</li>
-                    <li> -Barcola Play hard Rahimi can get a penalty if he plays next to him</li>
+                    <li> -GriZman est fatigué après un sprint de 9km, mettez Diaz à sa place, il peut créer des opportunités</li>
+                    <li> -Barcola joue dur, Rahimi peut obtenir un penalty s'il joue à côté de lui</li>
+                    <li> -Mbappe est en forme, utilisez-le pour des attaques rapides</li>
                 </ul>
                 <div className="player-list">
                     {enemy.map((p) => (

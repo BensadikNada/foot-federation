@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../Components/Header';
 import NavigationButtons from '../Components/NavigationButtons';
 import '../Styles/AfterLogin.css';
+import ChatBot from '../Components/ChatBot'
 import CountUp from '../Components/CountUp';  // Ensure the correct path
 function AfterLogin() {
   return (
@@ -19,6 +20,7 @@ function AfterLogin() {
       </div>
       </div>
       <NavigationButtons />
+      <ChatBot/>
     </div>
   );
 }

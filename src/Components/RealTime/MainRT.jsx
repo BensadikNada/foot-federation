@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeartPulse, faBullseye, faRunning, faTemperatureHalf, faHexagonNodes } from '@fortawesome/free-solid-svg-icons';
 import '../../Styles/MainRT.css';
@@ -7,14 +8,12 @@ import SideBarRT from './SideBarRT';
 
 function MainRT() {
   const [players, setPlayers] = useState([]);
-  const [recordIndex, setRecordIndex] = useState({}); // Keeps track of the current record index for each player
+  const [recordIndex, setRecordIndex] = useState({});
   const [searchQuery, setSearchQuery] = useState('');
-
-  const API_URL = import.meta.env.VITE_API_URL || "https://json-file-asil.onrender.com";
 
   useEffect(() => {
     axios
-      .get(`${API_URL}/players`)
+      .get('http://localhost:3000/players') // Fetch player data
       .then((res) => {
         setPlayers(res.data);
         const initialIndex = res.data.reduce((acc, player) => {
@@ -23,13 +22,10 @@ function MainRT() {
         }, {});
         setRecordIndex(initialIndex);
       })
-      .catch((err) => {
-        console.error("API Error:", err);
-      });
+      .catch((err) => console.error(err));
   }, []);
 
   useEffect(() => {
-    // Switch records every 4 seconds
     const interval = setInterval(() => {
       setRecordIndex((prevIndex) => {
         const newIndex = { ...prevIndex };
@@ -42,7 +38,7 @@ function MainRT() {
       });
     }, 4000);
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval);
   }, [players]);
 
   const handleSearchChange = (e) => {
@@ -66,7 +62,7 @@ function MainRT() {
       </div>
       <div className="mainRT-container">
         {filteredPlayers.map((p) => {
-          const currentRecord = p.records[recordIndex[p.id]] || {}; // Get the current record for this player
+          const currentRecord = p.records[recordIndex[p.id]] || {};
           return (
             <div key={p.id} className="player-container">
               <h2 className="name">{p.name}</h2>
@@ -95,6 +91,10 @@ function MainRT() {
                   {currentRecord.movementAndSpeedParameters?.totalDistanceCovered} km
                 </span>
               </div>
+              {/* Pass player ID via Link */}
+              <Link to={`/analise/${p.id}`} className="analyze-link">
+                Analyze Performance
+              </Link>
             </div>
           );
         })}

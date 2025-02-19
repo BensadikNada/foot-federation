@@ -31,3 +31,36 @@
     transform: scale(1.1);
     /* Slightly enlarge the logo on hover */
 }
+@media screen and (max-width: 1024px) {
+    .footer {
+      gap: 50px; /* Reduce space between logos */
+    }
+  
+    .footer img {
+      max-height: 35px; /* Slightly smaller logos */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer {
+      flex-direction: column; /* Stack logos vertically */
+      gap: 20px;
+      padding: 15px;
+    }
+  
+    .footer img {
+      max-height: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .footer {
+      gap: 15px;
+      padding: 10px;
+    }
+  
+    .footer img {
+      max-height: 25px; /* Further reduce size for small screens */
+    }
+  }
+  

@@ -8,7 +8,9 @@ function ExpertSystem() {
     <div>
         <NavER/>
         <GestionBlessure/>
-        <Footer/>
+        {/* <br/>
+        <br/><br/><br/><br/><br/>
+        <Footer/> */}
     </div>
   )
 }

@@ -17,6 +17,13 @@
     width: 80px;
     height: 80px;
 }
+.small-timer .timer {
+  font-weight: 600;
+  font-size: 30px; /* Adjust the font size to make it smaller */
+  color: #DCAC3C;/* Optional: Change the color for better contrast */
+  text-align: center; /* Center-align the timer if needed */
+  margin-top: 5px; /* Add spacing if necessary */
+}
 
 .nav-rt h3 {
     font-size: 1.7rem;
@@ -65,4 +72,39 @@
 
 .dropdown-menu a:hover {
   background-color: #f0f0f02f;
+}
+@media (max-width: 768px) {
+  /* Navbar styling adjustments */
+  .nav-rt {
+      flex-direction: column; /* Stack the elements vertically */
+      align-items: flex-start; /* Align items to the left */
+      padding: 15px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .nav-rt img {
+      width: 60px; /* Resize the logo image */
+      height: 60px;
+  }
+
+  .nav-rt h3 {
+      font-size: 1.3rem; /* Smaller font size for title */
+      text-align: left; /* Align text to the left */
+      margin-left: 10px; /* Add left margin */
+  }
+
+  /* Dropdown adjustments */
+  .dropdown-toggle {
+      font-size: 30px; /* Smaller font size for the dropdown button */
+  }
+
+  .dropdown-menu {
+      width: 100%; /* Make the dropdown take full width on small screens */
+      left: 0; /* Align the dropdown to the left */
+      padding: 10px 0; /* Adjust padding */
+  }
+
+  .dropdown-menu a {
+      padding: 8px 15px; /* Adjust padding for smaller screen */
+      font-size: 16px; /* Smaller font size for links */
+  }
 }

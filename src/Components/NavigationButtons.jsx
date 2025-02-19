@@ -12,7 +12,7 @@ function NavigationButtons() {
     <div className="navigation-buttons">
       <Link className='nav-btn' to='/real-time'>Suivi en temps réel</Link>
       <Link className='nav-btn' to='/expert-system'>Système expert intelligent</Link>
-      <Link className="nav-btn" to="/medical-tracking">Suivi médical</Link>
+      {/* <Link className="nav-btn" to="/medical-tracking">Suivi médical</Link> */}
       <Link className="nav-btn" to="/historical-data" >Données Historiques</Link>
     </div></div>
   );

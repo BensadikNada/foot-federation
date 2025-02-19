@@ -69,4 +69,70 @@
   .login-btn:focus {
     outline: none;
   }
+  @media screen and (max-width: 1024px) {
+    .login-box {
+      max-width: 350px; /* Slightly reduce the width */
+      padding: 25px;
+    }
+  
+    .login-box h2 {
+      font-size: 22px;
+    }
+  
+    .input-container input {
+      font-size: 15px;
+      padding: 8px;
+    }
+  
+    .login-btn {
+      font-size: 15px;
+      padding: 8px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .login-container {
+      padding: 20px; /* Add padding for spacing */
+    }
+  
+    .login-box {
+      max-width: 320px;
+      padding: 20px;
+    }
+  
+    .login-box h2 {
+      font-size: 20px;
+    }
+  
+    .input-container input {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .login-btn {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .login-box {
+      max-width: 280px;
+      padding: 15px;
+    }
+  
+    .login-box h2 {
+      font-size: 18px;
+    }
+  
+    .input-container input {
+      font-size: 13px;
+      padding: 7px;
+    }
+  
+    .login-btn {
+      font-size: 13px;
+      padding: 7px;
+    }
+  }
   

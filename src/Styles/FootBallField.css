@@ -14,3 +14,32 @@
     border: 5px solid #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 1024px) {
+    .soccer-field {
+      margin-left: 100px;
+      height: 70%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .field {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+    }
+  
+    .soccer-field {
+      margin-left: 0;
+      height: 60%;
+      width: 90%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .soccer-field {
+      height: 50%;
+      width: 100%;
+      border-width: 3px;
+    }
+  }
+  

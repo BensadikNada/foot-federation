@@ -9,7 +9,7 @@
   text-align: right; /* Align the timer text to the right */
   font-size: 60px;
   color: #DCAC3C;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .start-pause-btn {
@@ -18,7 +18,7 @@
   background-color: transparent; /* Make the background transparent */
   border: none;   /* Remove the border */
   cursor: pointer; /* Add pointer cursor */
-  font-family: 'Arial', sans-serif; /* Same font as the timer */
+  font-family: 'Times New Roman', Times, serif; /* Same font as the timer */
   transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
@@ -28,4 +28,48 @@
 
 .start-pause-btn:active {
   color: #c0972b; /* Darker color on click */
+}
+@media screen and (max-width: 1024px) {
+  .timer-container {
+    padding: 0 50px;
+  }
+
+  .timer {
+    font-size: 50px;
+  }
+
+  .start-pause-btn {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .timer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  .timer {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .start-pause-btn {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .timer-container {
+    padding: 0 20px;
+  }
+
+  .timer {
+    font-size: 30px;
+  }
+
+  .start-pause-btn {
+    font-size: 30px;
+  }
 }

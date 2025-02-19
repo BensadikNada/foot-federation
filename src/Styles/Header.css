@@ -14,23 +14,79 @@
   padding: 0 20px; /* Added horizontal padding */
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row; /* Ensure logos are next to each other */
+}
+
 .logo {
   height: 80px;
 }
 
 .logo.left {
-  margin-left: 10px; 
+  margin-right: 10px; 
 }
 
 .logo.right {
-  margin-right: 10px; 
+  margin-left: 10px; 
 }
 
 .header-text {
   font-size: 24px;
   color: #DCAC3C; 
-  font-family: 'Arial', sans-serif; 
+  font-family: 'Times New Roman', Times, serif; 
   font-weight: bold;
   text-align: center;
   flex-grow: 1; /* Ensures text is centered */
 }
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 140px; /* Reduce height slightly */
+    padding: 0 15px;
+  }
+
+  .logo {
+    height: 70px; /* Scale down logos */
+  }
+
+  .header-text {
+    font-size: 22px; /* Adjust text size */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 120px;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .logo {
+    height: 60px;
+    margin: 5px 0;
+  }
+
+  .header-text {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .header-text {
+    font-size: 18px;
+  }
+}
+

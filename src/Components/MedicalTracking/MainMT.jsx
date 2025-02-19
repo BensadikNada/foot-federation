@@ -9,11 +9,9 @@ function MainMT() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedPlayer, setSelectedPlayer] = useState(null);
 
-    const API_URL = import.meta.env.VITE_API_URL || "https://json-file-asil.onrender.com";
-
     useEffect(() => {
         axios
-            .get(`${API_URL}/players`)
+            .get('http://localhost:3000/players')
             .then((res) => {
                 setPlayers(res.data);
             })
@@ -40,6 +38,8 @@ function MainMT() {
                     onChange={handleSearchChange}
                 />
             </div>
+        <div>
+            
             <div className="mainRT-container">
                 {filteredPlayers.map((p) => (
                     <div
@@ -131,6 +131,7 @@ function MainMT() {
                     </div>
                 </div>
             )}
+        </div>
         </div>
     );
 }

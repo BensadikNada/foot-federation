@@ -8,14 +8,19 @@ import ExpertSystem from './Pages/ExpertSystem';
 import Enemies from './Components/ExpertSystem/Enemies';
 import HistoricalData from './Pages/HistoricalData';
 import MedicalTracking from './Pages/MedicalTracking';
-import Construction from './Components/RealTime/Construction';
+import Construction from './Pages/Construction';
 import Remplacement from './Components/ExpertSystem/Remplacement';
 import PlayerReports from './Components/HistoricalData/PlayerReports';
+import Analise from './Pages/Analise';
+import './App.css';
 
 function App() {
   return (
     <Router>
       <Routes>
+
+      <Route path="/analise/:playerId" element={<Analise />} />
+      <Route path="/Analise" element={<Analise />} />
         <Route path="/" element={<Home />} />
         <Route path="/afterlogin" element={<AfterLogin />} />
         <Route path='/real-time' element={<RealTime/>}/>

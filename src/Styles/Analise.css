@@ -1,0 +1,284 @@
+/* Chart Container Styling */
+
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 100vh; /* Maintain the height */
+  width: 120vw; /* Increase the width */
+  max-width: 1200px; /* Set a maximum width for responsiveness */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for better focus */
+}
+
+/* Radar Chart Animations */
+@keyframes grow {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Chart Canvas Styling */
+canvas {
+  width: 100% !important; /* Make the canvas fill the container width */
+  height: 100% !important; /* Ensure canvas height remains proportional */
+  animation: grow 1.2s ease-in-out; /* Animation effect */
+}
+
+.center {
+  margin-top: 20%;
+  margin-left: 10%;
+}
+
+/* Title Styling */
+h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: -62%;
+  margin-left: 1%;
+  color: #f0c04a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+h3::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+/* Heart Rate */
+.heart-rate {
+  width: 150px;
+  height: 73px;
+  position: relative;
+  margin: 20px auto;
+  background-color: #ffffff; /* Solid white background */
+  border-radius: 10px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for a clean look */
+}
+
+.fade-in {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* White background for fade-in */
+  top: 0;
+  right: 0;
+  animation: heartRateIn 2.5s linear infinite;
+}
+
+.fade-out {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -120%;
+  animation: heartRateOut 2.5s linear infinite;
+  background: #f8f9fa;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0) 100%);
+}
+
+@keyframes heartRateIn {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes heartRateOut {
+  0% {
+    left: -120%;
+  }
+  30% {
+    left: -120%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.container-heart {
+  background-color: white;
+  width: 40%;
+  border-radius: 80px;
+  margin-left: 60%;
+}
+
+#heart {
+  color: red;
+}
+
+.Heart {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.SideBar {
+  position: fixed;
+  top: 90px;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #ffffff; /* White background */
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.SideBar.open {
+  transform: translateX(0); /* Bring the sidebar into view when open */
+}
+
+.h2 {
+  margin-top: 80%;
+}
+
+.SideBar .toggle-btn {
+  position: absolute;
+  top: 20px;
+  left: -50px;
+  background-color: #009b9e;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.SideBar-contents {
+  margin-top: 40px;
+}
+
+/* Open Sidebar */
+.SideBar.open {
+  transform: translateX(230px); /* Moves sidebar into view */
+}
+
+/* Toggle Button */
+.SideBar .toggle-btn {
+  position: absolute;
+  top: 20px;
+  left: -80px;
+  width: 35px;
+  height: 35px;
+  background-color: #5e0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Adjust toggle button when sidebar is open */
+.SideBar.open .toggle-btn {
+  transform: translateX(50px);
+}
+@media screen and (max-width: 1024px) {
+  .chart-container {
+      width: 90vw; /* Reduce width for better fit */
+      height: 80vh; /* Adjust height */
+      max-width: 900px;
+      padding: 15px;
+  }
+
+  h3 {
+      font-size: 2rem;
+      margin-top: -50%;
+  }
+
+  .container-heart {
+      width: 50%;
+      margin-left: 50%;
+  }
+
+  .SideBar {
+      width: 200px;
+      padding: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .chart-container {
+      width: 85vw;
+      height: 70vh;
+      padding: 10px;
+  }
+
+  .center {
+      margin-top: 15%;
+      margin-left: 5%;
+  }
+
+  h3 {
+      font-size: 1.8rem;
+      margin-top: -40%;
+  }
+
+  .container-heart {
+      width: 60%;
+      margin-left: 40%;
+  }
+
+  .SideBar {
+      width: 180px;
+  }
+
+  .SideBar .toggle-btn {
+      left: -60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .chart-container {
+      width: 95vw;
+      height: 60vh;
+      padding: 8px;
+  }
+
+  .center {
+      margin-top: 10%;
+      margin-left: 2%;
+  }
+
+  h3 {
+      font-size: 1.5rem;
+      margin-top: -30%;
+  }
+
+  .container-heart {
+      width: 80%;
+      margin-left: 10%;
+  }
+
+  .SideBar {
+      width: 160px;
+  }
+
+  .SideBar .toggle-btn {
+      left: -50px;
+      width: 30px;
+      height: 30px;
+  }
+}

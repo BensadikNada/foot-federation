@@ -1,8 +1,8 @@
 import React from 'react'
 import Footer from '../Components/Footer'
-import NavMT from '../Components/medicalTracking/NavMT';
-import SideBarMT from '../Components/medicalTracking/SideBarMT';
-import MainMT from '../Components/MedicalTracking/mainMT';
+import NavMT from '../Components/MedicalTracking/NavMT';
+import SideBarMT from '../Components/MedicalTracking/SideBarMT';
+import MainMT from '../Components/MedicalTracking/MainMT';
 
 function MedicalTracking() {
   return (

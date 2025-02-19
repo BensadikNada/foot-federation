@@ -145,3 +145,18 @@ nav button:focus {
   .submit-btn:hover {
     background-image: linear-gradient(to right, rgb(248, 121, 121), rgb(134, 12, 12));
   }
+  /* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      height: auto; /* Let the height adjust on smaller screens */
+  }
+
+  nav a {
+      margin: 0.5rem 0;
+  }
+
+  nav button {
+      margin-top: 1rem;
+  }
+}

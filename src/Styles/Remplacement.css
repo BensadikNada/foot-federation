@@ -1,11 +1,12 @@
 .remplacement {
-    display: flex;
+    display: flex
+;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     border-radius: 8px;
     margin-left: 250px;
-    margin-top: 120px;
+    margin-top: 350px;
 }
 
 .goalKeeper {
@@ -106,4 +107,62 @@
     border-left: 16px solid transparent; /* Reduced width */
     border-right: 16px solid transparent; /* Reduced width */
     border-bottom: 16px solid rgb(72, 255, 99); /* Reduced height */
+}
+@media (max-width: 768px) {
+    .remplacement {
+        flex-direction: column; /* Stack the elements vertically */
+        margin-left: 0; /* Remove the left margin */
+        margin-top: 80px; /* Reduce top margin for smaller screens */
+    }
+
+    .goalKeeper {
+        padding: 10px; /* Reduce padding */
+        margin-bottom: 20px; /* Add spacing between goalkeepers */
+    }
+
+    .goalKeeper h3 {
+        font-size: 20px; /* Smaller font size for titles */
+        padding: 10px 5px; /* Adjust padding */
+    }
+
+    .goalKeeper-card {
+        width: 100%; /* Allow the cards to stretch to full width */
+        margin-bottom: 10px; /* Adjust bottom margin */
+    }
+
+    .goalKeeper-info {
+        font-size: 14px; /* Smaller font size for text */
+    }
+
+    .goalKeeper-name {
+        font-size: 16px; /* Smaller font size for name */
+    }
+
+    .goalKeeper-image-container {
+        width: 80px; /* Smaller image container */
+        height: 80px;
+    }
+
+    .goalKeeper-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .triangle {
+        flex-direction: column; /* Stack triangles vertically */
+    }
+
+    .triangle-red, .triangle-green {
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent; /* Smaller triangle width */
+        border-right: 12px solid transparent; /* Smaller triangle width */
+        border-bottom: 12px solid rgb(255, 0, 0); /* Smaller triangle height */
+        margin-bottom: 10px; /* Reduce space between triangles */
+    }
+
+    .triangle-green {
+        border-bottom-color: rgb(72, 255, 99); /* Keep the green color */
+    }
 }

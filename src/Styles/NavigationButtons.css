@@ -1,42 +1,62 @@
 .navigation-buttons {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    /* margin-top:6%; */
-    margin-left:10%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  margin-left: 10%;
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: 1px solid #DCAC3C;
+  color: #DCAC3C;
+  font-size: 18px;
+  padding: 18px 40px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+}
+
+.nav-btn:hover {
+  background-color: #DCAC3C;
+  color: #340303;
+}
+
+.container1 {
+  width: 110%;
+  height: 30vh;
+  margin-left: 0;
+  background-color: #340303;
+  box-sizing: border-box;
+  border-bottom: 6px solid #DCAC3C;
+  margin-left: -10%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#timer {
+  margin-left: 10%;
+}
+@media (max-width: 768px) {
+  .navigation-buttons {
+      margin-left: 0; /* Center buttons with no margin-left */
+      margin-top: 10px;
   }
-  
+
   .nav-btn {
-    background-color: transparent;
-    border: 1px solid #DCAC3C;
-    color: #DCAC3C;
-    font-size: 18px;
-    padding: 18px 40px;
-    margin: 0 10px;
-    
-    cursor: pointer;
-    font-family: 'Arial', sans-serif;
-    text-decoration: none;
+      font-size: 16px; /* Smaller font size for smaller screens */
+      padding: 12px 30px; /* Adjust padding for smaller screens */
+      margin: 0 8px; /* Decrease margin for tighter layout */
   }
-  
-  .nav-btn:hover {
-    background-color: #DCAC3C;
-    color: #340303 ;
-  }
+
   .container1 {
-    width: 110%; /* 100% width to avoid overflow */
-    height: 30vh; /* 40% of the viewport height */
-   
-    margin-left: 0; /* Ensure the container is aligned to the left */
-    background-color: #340303;
-    box-sizing: border-box; /* Ensures padding and borders are included in the width/height */
-    border-bottom: 6px solid #DCAC3C; /* Golden bottom border */
-    margin-left:-10%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+      width: 100%; /* Full width for the container */
+      height: auto; /* Adjust height for smaller screens */
+      margin-left: 0; /* Reset margin for better alignment */
   }
-  
- #timer{
-margin-left:10%;
- }
+
+  #timer {
+      margin-left: 0; /* Center the timer */
+  }
+}

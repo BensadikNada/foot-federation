@@ -5,9 +5,8 @@ function Main() {
     return (
         <div className="container">
             <img src="/assets/sansiro.png" alt="sansiro" />
-            <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque porro ipsa accusamus quisquam. Ducimus iste optio, ratione animi obcaecati id eaque ut debitis totam alias eligendi. Similique quisquam mollitia quis.</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem id impedit accusamus maxime quae minus praesentium neque fugiat, necessitatibus consequuntur, libero quo. Earum ipsum maxime nulla iure, quia minima maiores.
-            Tenetur sequi quos sed! Eligendi minus distinctio, ipsam fugit dicta non animi explicabo itaque a quos earum quasi facilis totam ullam delectus excepturi iure natus. Suscipit quidem laudantium ut animi.
-            Asperiores quaerat eius iste consequatur cum, quisquam mollitia suscipit soluta magnam et illo, reiciendis minus est! Iste enim accusamus, illum vitae architecto veritatis perferendis aspernatur voluptate praesentium, hic fuga qui.</p>
+            <p>The 2030 FIFA World Cup is set to be a historic event, marking the centenary of the first World Cup held in 1930. This tournament will bring together the best national teams from around the globe to compete for the prestigious title. Fans are eagerly anticipating the excitement, drama, and unforgettable moments that the World Cup always delivers. With advanced technology and state-of-the-art stadiums, the 2030 World Cup promises to be a spectacular celebration of football.</p>
+            <p>In addition to the thrilling matches, the World Cup will also feature various cultural events, fan zones, and interactive experiences for attendees. This will provide an opportunity for fans to immerse themselves in the rich football culture and connect with fellow enthusiasts from different parts of the world. The host cities are preparing to welcome millions of visitors, ensuring a memorable and enjoyable experience for everyone involved.</p>
         </div>
     )
 }

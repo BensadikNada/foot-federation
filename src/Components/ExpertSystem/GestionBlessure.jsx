@@ -5,12 +5,11 @@ import '../../Styles/GestionBlessure.css';
 
 function GestionBlessure() {
   const [player, setPlayer] = useState([]);
-  const API_URL = import.meta.env.VITE_API_URL || "https://json-file-asil.onrender.com";
 
   useEffect(() => {
     // Fetch players data initially
     axios
-      .get(`${API_URL}/players`)
+      .get('http://localhost:3000/players')
       .then((res) => {
         // Initialize players with different heart rate bar heights
         const updatedPlayers = res.data.map((p) => ({
@@ -50,9 +49,9 @@ function GestionBlessure() {
       <SideBarES />
       <div>
         <ul className="player-instructions">
-          <li> -Change En-Nassiri by Rahimi he is all about having energy.</li>
-          <li> -Change Ounahi he is underperforming</li>
-          <li> -Change Akhomach by Diaz he will break the block</li>
+          <li> -Remplacez En-Nassiri par Rahimi, il est plein d'énergie.</li>
+          <li> -Remplacez Ounahi, il est sous-performant.</li>
+          <li> -Remplacez Akhomach par Diaz, il va briser le bloc.</li>
         </ul>
         <div className="player-list">
           {player.map((p) => (

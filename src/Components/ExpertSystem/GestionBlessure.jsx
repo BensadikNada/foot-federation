@@ -6,10 +6,12 @@ import '../../Styles/GestionBlessure.css';
 function GestionBlessure() {
   const [player, setPlayer] = useState([]);
 
+  const API_URL = import.meta.env.VITE_API_URL || "https://json-file-asil.onrender.com";
+
   useEffect(() => {
     // Fetch players data initially
     axios
-      .get('http://localhost:3000/players')
+      .get(`${API_URL}/players`)
       .then((res) => {
         // Initialize players with different heart rate bar heights
         const updatedPlayers = res.data.map((p) => ({

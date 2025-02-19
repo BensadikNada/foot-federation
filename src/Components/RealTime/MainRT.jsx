@@ -11,9 +11,11 @@ function MainRT() {
   const [recordIndex, setRecordIndex] = useState({});
   const [searchQuery, setSearchQuery] = useState('');
 
+  const API_URL = import.meta.env.VITE_API_URL || "https://json-file-asil.onrender.com";
+
   useEffect(() => {
     axios
-      .get('http://localhost:3000/players') // Fetch player data
+      .get(`${API_URL}/players`)
       .then((res) => {
         setPlayers(res.data);
         const initialIndex = res.data.reduce((acc, player) => {
@@ -22,7 +24,9 @@ function MainRT() {
         }, {});
         setRecordIndex(initialIndex);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.error("API Error:", err);
+      });
   }, []);
 
   useEffect(() => {

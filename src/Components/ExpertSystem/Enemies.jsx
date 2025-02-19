@@ -7,8 +7,10 @@ import SideBarES from "./SideBarES";
 export default function Enemies() {
     const [enemy, setEnemy] = useState([]); // Initialize as an empty array
 
+    const API_URL = import.meta.env.VITE_API_URL || "https://json-file-asil.onrender.com";
+
     useEffect(() => {
-        axios.get('http://localhost:3000/enemies').then((res) => {
+        axios.get(`${API_URL}/enemies`).then((res) => {
             const updatedPlayers = res.data.map((p) => ({
                 ...p,
                 currentHeartRate: 100,

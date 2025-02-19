@@ -9,9 +9,11 @@ function MainMT() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedPlayer, setSelectedPlayer] = useState(null);
 
+    const API_URL = import.meta.env.VITE_API_URL || "https://json-file-asil.onrender.com";
+
     useEffect(() => {
         axios
-            .get('http://localhost:3000/players')
+            .get(`${API_URL}/players`)
             .then((res) => {
                 setPlayers(res.data);
             })

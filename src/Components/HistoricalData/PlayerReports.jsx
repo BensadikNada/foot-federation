@@ -7,8 +7,10 @@ import Footer from '../Footer';
 const PlayerReports = () => {
     const [matchData, setMatchData] = useState([]);
 
+    const API_URL = import.meta.env.VITE_API_URL || "https://json-file-asil.onrender.com";
+
     useEffect(() => {
-        fetch('http://localhost:3000/matches')
+        fetch(`${API_URL}/matches`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);

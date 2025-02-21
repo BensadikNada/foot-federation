@@ -58,7 +58,7 @@
 @media screen and (max-width: 768px) {
   .header {
     height: 120px;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: row; /* Stack elements vertically */
     align-items: center;
     text-align: center;
     padding: 10px;
@@ -79,6 +79,7 @@
   .header {
     height: auto;
     padding: 10px;
+    flex-direction: row;
   }
 
   .logo {
@@ -89,4 +90,3 @@
     font-size: 18px;
   }
 }
-

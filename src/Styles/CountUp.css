@@ -45,9 +45,10 @@
 
 @media screen and (max-width: 768px) {
   .timer-container {
-    flex-direction: column;
+
     align-items: center;
     padding: 0 30px;
+    flex-direction: row;
   }
 
   .timer {
@@ -63,6 +64,7 @@
 @media screen and (max-width: 480px) {
   .timer-container {
     padding: 0 20px;
+    flex-direction: row;
   }
 
   .timer {

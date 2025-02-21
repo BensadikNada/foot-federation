@@ -100,56 +100,59 @@ function Analise() {
   };
 
   return (
-    <div><Stats/>
-    <div className="center">
-      
-      <h3 style={{ textAlign: 'center', marginBottom: '20px' }}>Performance Analysis</h3>
-      
-      {/* Navigation Buttons */}
-      <div className="nav-buttons">
-        <button 
-          className={activeTab === 'heartRate' ? 'active' : ''}
-          onClick={() => setActiveTab('heartRate')}
-        >
-          <FontAwesomeIcon icon={faHeartPulse} size="lg" /> Heart Rate
-        </button>
+    <div>
+      <Stats />
+      <div className="center">
+        <h3 style={{ textAlign: 'center', marginBottom: '20px' }}>Performance Analysis</h3>
 
-        <button 
-          className={activeTab === 'stressLevel' ? 'active' : ''}
-          onClick={() => setActiveTab('stressLevel')}
-        >
-          <FontAwesomeIcon icon={faBrain} size="lg" /> Stress Level
-        </button>
+        {/* Navigation Buttons */}
+        <div className="nav-buttons">
+          <button
+            className={activeTab === 'heartRate' ? 'active' : ''}
+            onClick={() => setActiveTab('heartRate')}
+            style={{ textDecoration: 'none' }}
+          >
+            <FontAwesomeIcon icon={faHeartPulse} size="lg" /> Heart Rate
+          </button>
 
-        <button 
-          className={activeTab === 'o2Level' ? 'active' : ''}
-          onClick={() => setActiveTab('o2Level')}
-        >
-          <FontAwesomeIcon icon={faLungs} size="lg" /> O2 Level
-        </button>
-      </div>
+          <button
+            className={activeTab === 'stressLevel' ? 'active' : ''}
+            onClick={() => setActiveTab('stressLevel')}
+            style={{ textDecoration: 'none' }}
+          >
+            <FontAwesomeIcon icon={faBrain} size="lg" /> Stress Level
+          </button>
 
-      <div style={{ width: '100%', textAlign: 'center', margin: '20px 0' }}></div>
-      
-      <div
-        style={{
-          maxWidth: '600px',
-          margin: '20px auto',
-          padding: '20px',
-          background: '#f9f9f9',
-          borderRadius: '10px',
-          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-        }}
-      >
-        {/* Pass activeTab as a prop */}
-        <SideBar activeTab={activeTab} />
-        <SideBarRT />
-        <NavRT />
-        <div style={{ height: '400px' }}>
-          <Radar data={aggregatedData} options={options} />
+          <button
+            className={activeTab === 'o2Level' ? 'active' : ''}
+            onClick={() => setActiveTab('o2Level')}
+            style={{ textDecoration: 'none' }}
+          >
+            <FontAwesomeIcon icon={faLungs} size="lg" /> O2 Level
+          </button>
+        </div>
+
+        <div style={{ width: '100%', textAlign: 'center', margin: '20px 0' }}></div>
+
+        <div
+          style={{
+            maxWidth: '600px',
+            margin: '20px auto',
+            padding: '20px',
+            background: '#f9f9f9',
+            borderRadius: '10px',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+          }}
+        >
+          {/* Pass activeTab as a prop */}
+          <SideBar activeTab={activeTab} />
+          <SideBarRT />
+          <NavRT />
+          <div style={{ height: '400px' }}>
+            <Radar data={aggregatedData} options={options} />
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }

@@ -64,8 +64,9 @@
 
 @media (max-width: 768px) {
     .sidebar-container {
+        top: -95px; /* Move the sidebar up */
         width: 200px; /* Reduce sidebar width */
-        margin-top: 20px; /* Reduce the top margin */
+        margin-top: 196px;
         padding-top: 10px; /* Adjust padding for smaller screens */
     }
 
@@ -94,5 +95,40 @@
 
     .sidebar ul li {
         margin: 8px 0; /* Reduce margin between list items */
+    }
+}
+@media (max-width: 480px) {
+    .sidebar-container {
+        top: -48px;
+        width: 160px; /* Further reduce sidebar width */
+        margin-top: 150px;
+        padding-top: 5px; /* Adjust padding for smaller screens */
+    }
+
+    .sidebar ul li a {
+        font-size: 12px; /* Smaller font size for links */
+        padding: 6px 8px; /* Reduce padding for smaller screens */
+        width: 140px; /* Reduce width of the links */
+        margin: 0 auto; /* Keep links centered */
+        border-radius: 20px; /* Adjust border-radius for smaller screens */
+    }
+
+    .sidebar ul li a.active {
+        background-color: #DCAC3C; /* Active link styling */
+        color: #340303;
+        border-color: #340303;
+    }
+
+    .sidebar {
+        padding: 5px; /* Reduce padding in the sidebar */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .sidebar ul {
+        text-align: left; /* Align list items to the left */
+    }
+
+    .sidebar ul li {
+        margin: 5px 0; /* Reduce margin between list items */
     }
 }

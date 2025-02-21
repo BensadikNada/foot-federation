@@ -1,4 +1,3 @@
-import React from 'react'
 import NavRT from '../Components/RealTime/NavRT'
 import Footer from '../Components/Footer'
 import MainRT from '../Components/RealTime/MainRT'

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,7 +8,8 @@ const ChatBotComponent = () => {
   const [showChatBot, setShowChatBot] = useState(false); // Toggle visibility of the chat bot
 
   // Function to send the user's message to the server
-  const sendMessage = async () => {
+  const sendMessage = async (e) => {
+    e.preventDefault();
     if (!userInput) return; // Don't send empty messages
 
     // Add the user's message to the chat history
@@ -59,20 +60,20 @@ const ChatBotComponent = () => {
       </button>
 
       {showChatBot && (
-        <div className="chat-container" style={{ maxWidth: '400px', margin: 'auto', padding: '20px', border: '1px solid #ccc', borderRadius: '10px', backgroundColor: '#f9f9f9' }}>
+        <div className="chat-container" style={{ maxWidth: "559px", margin: "auto", padding: "13px", border: "2px solid #DCAC3C ", borderRadius: "9px", backgroundColor: "#340303", height: "600px" ,width: "700px", position: "fixed", bottom: "100px", right: "10px", zIndex: "9999" }}>
           <div style={{ textAlign: 'right' }}>
-            <button onClick={closeChatBot} style={{ background: 'none', border: 'none', fontSize: '20px', color: '#007bff', cursor: 'pointer' }}>
+            <button onClick={closeChatBot} style={{ background: 'none', border: 'none', fontSize: '20px', color: '#DCAC3C', cursor: 'pointer' }}>
               X
             </button>
           </div>
-          <div className="chat-history" style={{ maxHeight: '300px', overflowY: 'auto', marginBottom: '20px' }}>
+          <div className="chat-history" style={{ maxHeight: '500px', overflowY: 'auto', marginBottom: '20px' }}>
             {messages.map((msg, index) => (
-              <div key={index} className={msg.sender} style={{ margin: '10px 0', textAlign: msg.sender === 'user' ? 'right' : 'left' }}>
+              <div key={index} className={msg.sender} style={{ margin: '10px 0', textAlign: msg.sender === 'user' ? 'right' : 'left' ,color: msg.sender === 'user' ? '#DCAC3C' : '#fff'}}>
                 <strong>{msg.sender === 'user' ? 'You' : 'Assistant'}: </strong>{msg.text}
               </div>
             ))}
           </div>
-          <div style={{ position: 'relative' }}>
+          <form onSubmit={sendMessage} style={{ position: 'relative' }}>
             <input
               type="text"
               value={userInput}
@@ -83,10 +84,9 @@ const ChatBotComponent = () => {
                 padding: '10px 40px 10px 10px', // Add padding to leave space for the icon
                 borderRadius: '5px',
                 border: '1px solid #ccc',
-                position: 'relative',
               }}
             />
-            <button onClick={sendMessage} style={{
+            <button type="submit" style={{
               position: 'absolute',
               right: '10px', // Position the icon inside the input
               top: '50%',
@@ -97,7 +97,7 @@ const ChatBotComponent = () => {
             }}>
               <FontAwesomeIcon icon={faPaperPlane} style={{ fontSize: '18px', color: '#007bff' }} />
             </button>
-          </div>
+          </form>
         </div>
       )}
     </div>

@@ -13,6 +13,7 @@ import Remplacement from './Components/ExpertSystem/Remplacement';
 import PlayerReports from './Components/HistoricalData/PlayerReports';
 import Analise from './Pages/Analise';
 import './App.css';
+import Last10Game from './Pages/Last10Game';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path='/construction' element={<Construction/>}/>
         <Route path='/systeme-remplacement' element={<Remplacement/>}/>
         <Route path='/player-reports' element={<PlayerReports/>}/>
+        <Route path='/last-10-matches' element={<Last10Game/>}/>
       </Routes>
     </Router>
   );

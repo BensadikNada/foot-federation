@@ -1,65 +1,73 @@
 /* Stats.css */
 .stats-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-left:14%;
-    margin-top:8%;
-    max-width: 340px;
-    padding: 40px;
-    border-radius: 16px;
-    color: white;
-  }
-  
-  .stat-item {
-    
-    background: linear-gradient(90deg, #6f4e00, #430000);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 16px;
-    margin: 6px 0;
-    border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.6);
-    transition: background-color 0.3s ease;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 14%;
+  margin-top: 8%;
+  max-width: 340px;
+  padding: 40px;
+  border-radius: 16px;
+  color: #340303;
+}
 
-  
-  .stat-item:hover {
-    background-color: rgba(185, 111, 46, 0.2);
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  margin: 6px 0;
+  border-radius: 8px;
+  background-color: #DCAC3C;
+  transition: background-color 0.3s ease;
+}
+
+
+
+.stat-item:hover {
+  background-color: #340303;
+  color: #DCAC3C;
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    margin-left: 0;
+    /* Remove left margin on small screens */
+    margin-top: 5%;
+    /* Adjust top margin */
+    max-width: 100%;
+    /* Allow stats container to use full width */
+    padding: 20px;
+    /* Reduce padding */
   }
-  
+
+  .stat-item {
+    padding: 8px 12px;
+    /* Adjust padding for smaller screens */
+    margin: 4px 0;
+    /* Reduce margin between stat items */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Darker background for small screens */
+  }
+
   .stat-label {
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 12px;
+    /* Smaller font size for labels */
   }
-  
+
   .stat-value {
-    font-size: 16px;
-    font-weight: 700;
-    text-align: right;
+    font-size: 14px;
+    /* Smaller font size for values */
   }
-  @media (max-width: 768px) {
-    .stats-container {
-      margin-left: 0; /* Remove left margin on small screens */
-      margin-top: 5%; /* Adjust top margin */
-      max-width: 100%; /* Allow stats container to use full width */
-      padding: 20px; /* Reduce padding */
-    }
-  
-    .stat-item {
-      padding: 8px 12px; /* Adjust padding for smaller screens */
-      margin: 4px 0; /* Reduce margin between stat items */
-      background-color: rgba(0, 0, 0, 0.5); /* Darker background for small screens */
-    }
-  
-    .stat-label {
-      font-size: 12px; /* Smaller font size for labels */
-    }
-  
-    .stat-value {
-      font-size: 14px; /* Smaller font size for values */
-    }
-  }
-  
+}

@@ -67,40 +67,44 @@ function MainRT() {
       <div className="mainRT-container">
         {filteredPlayers.map((p) => {
           const currentRecord = p.records[recordIndex[p.id]] || {};
-          return (
+            return (
             <div key={p.id} className="player-container">
               <h2 className="name">{p.name}</h2>
               <ul className="information">
-                <li>
-                  <FontAwesomeIcon className="iconRT heart-pulse-icon" icon={faHeartPulse} />{' '}
-                  {currentRecord.physiologicalParameters?.heartRate} bpm
-                </li>
-                <li>
-                  <FontAwesomeIcon className="iconRT" icon={faBullseye} />{' '}
-                  {currentRecord.technicalPerformanceParameters?.passingAccuracy} %
-                </li>
-                <li>
-                  <FontAwesomeIcon className="iconRT running-pulse-icon" icon={faRunning} />{' '}
-                  {currentRecord.movementAndSpeedParameters?.instantaneousSpeed} km/h
-                </li>
-                <li>
-                  <FontAwesomeIcon className="iconRT" icon={faTemperatureHalf} />{' '}
-                  {currentRecord.physiologicalParameters?.bodyTemperature} °c
-                </li>
+              <li>
+                <FontAwesomeIcon className="iconRT heart-pulse-icon" icon={faHeartPulse} />{' '}
+                {currentRecord.physiologicalParameters?.heartRate} bpm
+              </li>
+              <li>
+                <FontAwesomeIcon className="iconRT" icon={faBullseye} />{' '}
+                {currentRecord.technicalPerformanceParameters?.passingAccuracy} %
+              </li>
+              <li>
+                <FontAwesomeIcon className="iconRT running-pulse-icon" icon={faRunning} />{' '}
+                {currentRecord.movementAndSpeedParameters?.instantaneousSpeed} km/h
+              </li>
+              <li>
+                <FontAwesomeIcon className="iconRT" icon={faTemperatureHalf} />{' '}
+                {currentRecord.physiologicalParameters?.bodyTemperature} °c
+              </li>
               </ul>
               <div className="image">
-                <img src={p.image} alt="player" />
-                <span>
-                  <FontAwesomeIcon className="iconRT" icon={faHexagonNodes} />{' '}
-                  {currentRecord.movementAndSpeedParameters?.totalDistanceCovered} km
-                </span>
+              <img src={p.image} alt="player" />
+              <span>
+                <FontAwesomeIcon className="iconRT" icon={faHexagonNodes} />{' '}
+                {currentRecord.movementAndSpeedParameters?.totalDistanceCovered} km
+              </span>
               </div>
               {/* Pass player ID via Link */}
-              <Link to={`/analise/${p.id}`} className="analyze-link">
-                Analyze Performance
+              <Link to={`/analise/${p.id}`} className="analyze-link" style={{textDecoration: "none"}}>
+              Analyze Performance
               </Link>
+              <Link to={`/analise/${p.id}`} className='last-10-games-link' style={{textDecoration: "none"}}>
+              Laste 10 games
+              </Link>
+             
             </div>
-          );
+            );
         })}
       </div>
     </div>

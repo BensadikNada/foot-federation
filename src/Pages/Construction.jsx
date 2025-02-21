@@ -40,7 +40,7 @@ export default function Construction() {
             <NavRT />
             <SideBarRT />
             <div className="timeline-container">
-                <h2>Match Timeline</h2>
+                <h2 style={{color: "white"}}>Match Timeline</h2>
                 <div className="timeline">
                     <div className="timeline-progress" style={{ width: `${progress}%` }}></div>
                     {events.map((event, index) => (

@@ -7,6 +7,7 @@
   font-family: 'Times New Roman', Times, serif;
   max-width: 70%;
 }
+
 .table-container1 {
   margin-top: 10%;
   margin-bottom: 12%;
@@ -16,114 +17,140 @@
   font-family: 'Times New Roman', Times, serif;
   max-width: 70%;
 }
-  .table-title1 {
-    text-align: center;
-    color: #f1c40f; /* Soccer-themed yellow for titles */
-    margin-bottom: 15%;
-    font-size: 22px; /* Slightly smaller title font */
-  }
-  .table-title {
-    text-align: center;
-    color: #f1c40f; /* Soccer-themed yellow for titles */
-    margin-bottom: 15px;
-    font-size: 22px; /* Slightly smaller title font */
-  }
-  .title{
-    color:  white;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    margin-top: 5%;
-    margin-bottom: 5%;
 
+.table-title1 {
+  text-align: center;
+  color: #DCAC3C;
+  /* Soccer-themed yellow for titles */
+  margin-bottom: 5%;
+  font-size: 22px;
+  /* Slightly smaller title font */
+}
+
+.table-title {
+  text-align: center;
+  color: #DCAC3C;
+  /* Soccer-themed yellow for titles */
+  margin-bottom: 15px;
+  font-size: 22px;
+  /* Slightly smaller title font */
+}
+
+.title {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}
+
+.match-table {
+  width: 100%;
+  /* Reduced table width */
+  margin: 0 auto;
+  /* Center the table within the container */
+  border-collapse: collapse;
+  background-color: #3b0805;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.match-table th, .match-table td {
+  padding: 10px;
+  /* Reduced cell padding */
+  text-align: center;
+  border-bottom: 1px solid #5e1710;
+}
+
+.match-table th {
+  background-color: #610f07;
+  color: #DCAC3C;
+  /* Golden tone for headers */
+  text-transform: uppercase;
+  font-size: 13px;
+  /* Slightly smaller header font */
+  letter-spacing: 0.5px;
+}
+
+.match-table tbody tr:nth-child(odd) {
+  background-color: #4d0d06;
+}
+
+.match-table tbody tr:nth-child(even) {
+  background-color: #3b0805;
+}
+
+.match-table tbody tr:hover {
+  background-color: #DCAC3C;
+  color: #420d09;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.match-table a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.match-table a:hover {
+  color: #1abc9c;
+  /* Aqua for hover effect */
+  text-decoration: underline;
+}
+
+.table-icon {
+  width: 15px;
+  /* Smaller icon size */
+  height: 15px;
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    margin-left: 10%;
+    /* Reduced left margin for smaller screens */
+    margin-top: 10%;
+    /* Adjusted top margin */
+    margin-bottom: 10%;
+    /* Adjusted bottom margin */
+    padding: 10px;
+    /* Reduced padding */
+    max-width: 90%;
+    /* Increased max-width for smaller screens */
   }
-  
+
+  .table-title {
+    font-size: 18px;
+    /* Smaller font size for titles */
+  }
+
   .match-table {
-    width: 100%; /* Reduced table width */
-    margin: 0 auto; /* Center the table within the container */
-    border-collapse: collapse;
-    background-color: #3b0805;
-    color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
+    width: 100%;
+    /* Full width for the table */
+    max-width: 100%;
+    /* Ensure the table doesn't overflow */
   }
-  
+
   .match-table th, .match-table td {
-    padding: 10px; /* Reduced cell padding */
-    text-align: center;
-    border-bottom: 1px solid #5e1710;
+    padding: 8px;
+    /* Reduced cell padding */
+    font-size: 12px;
+    /* Smaller text for table cells */
   }
-  
+
   .match-table th {
-    background-color: #610f07;
-    color: #f1c40f; /* Golden tone for headers */
-    text-transform: uppercase;
-    font-size: 13px; /* Slightly smaller header font */
-    letter-spacing: 0.5px;
+    font-size: 12px;
+    /* Smaller header font */
   }
-  
-  .match-table tbody tr:nth-child(odd) {
-    background-color: #4d0d06;
-  }
-  
-  .match-table tbody tr:nth-child(even) {
-    background-color: #3b0805;
-  }
-  
-  .match-table tbody tr:hover {
-    background-color: #f1c40f;
-    color: #420d09;
-    transform: scale(1.02);
-    transition: all 0.3s ease;
-  }
-  
-  .match-table a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .match-table a:hover {
-    color: #1abc9c; /* Aqua for hover effect */
-    text-decoration: underline;
-  }
-  
+
   .table-icon {
-    width: 15px; /* Smaller icon size */
-    height: 15px;
-    margin-right: 5px;
+    width: 12px;
+    /* Smaller icon size */
+    height: 12px;
   }
-  @media (max-width: 768px) {
-    .table-container {
-      margin-left: 10%; /* Reduced left margin for smaller screens */
-      margin-top: 10%; /* Adjusted top margin */
-      margin-bottom: 10%; /* Adjusted bottom margin */
-      padding: 10px; /* Reduced padding */
-      max-width: 90%; /* Increased max-width for smaller screens */
-    }
-  
-    .table-title {
-      font-size: 18px; /* Smaller font size for titles */
-    }
-  
-    .match-table {
-      width: 100%; /* Full width for the table */
-      max-width: 100%; /* Ensure the table doesn't overflow */
-    }
-  
-    .match-table th, .match-table td {
-      padding: 8px; /* Reduced cell padding */
-      font-size: 12px; /* Smaller text for table cells */
-    }
-  
-    .match-table th {
-      font-size: 12px; /* Smaller header font */
-    }
-  
-    .table-icon {
-      width: 12px; /* Smaller icon size */
-      height: 12px;
-    }
-  }
-  
+}

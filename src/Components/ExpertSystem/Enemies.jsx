@@ -3,6 +3,7 @@ import axios from "axios";
 import '../../Styles/GestionBlessure.css';
 import NavES from "./NavES"
 import SideBarES from "./SideBarES";
+import ChatBotComponent from "../ChatBot";
 
 export default function Enemies() {
     const [enemy, setEnemy] = useState([]); // Initialize as an empty array
@@ -73,6 +74,7 @@ export default function Enemies() {
                     ))}
                 </div>
             </div>
+            <ChatBotComponent />
         </div>
     );
 };

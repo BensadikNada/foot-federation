@@ -3,6 +3,7 @@ import SideBarES from './SideBarES';
 import NavES from './NavES';
 import '../../Styles/Remplacement.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ChatBotComponent from '../ChatBot';
 
 const getBarColor = (value) => {
     if (value > 75) return '#43de06';
@@ -181,6 +182,7 @@ const Remplacement = () => {
                     </div>
                 </div>
             </div>
+            <ChatBotComponent />
         </div>
     );
 };

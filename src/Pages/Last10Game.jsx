@@ -1,89 +1,107 @@
-import React from 'react';
 import SideBarRT from '../Components/RealTime/SideBarRT';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import NavRT from '../Components/RealTime/NavRT';
+import ChatBotComponent from '../Components/ChatBot';
+import '../Styles/Last10games.css';
 
 const Last10Game = () => {
+    const { playerName } = useParams();
+    const [playerData, setPlayerData] = useState([]);
+
+    useEffect(() => {
+        axios
+            .get('https://json-file-asil.onrender.com/players') // Fetch player data
+            .then((res) => {
+                console.log(res.data);
+            })
+            .catch((err) => console.error(err));
+    }, []);
+
     return (
-        <div style={{ display: "flex", flexDirection: "column", backgroundColor: "#f0f0f0", color: "#333", paddingLeft: "40px",paddingRight: '40px',paddingTop:"5%",paddingBottom:"20%",height:'100%' ,marginLeft: "234px"}}>
+        <div className="last10games-container">
             <SideBarRT />
             <NavRT />
-            <h1 style={{ textAlign: "center", marginTop: "20px", marginBottom: "20px" }}>Last 10 Matches</h1>
-            <h2 style={{ textAlign: "center", marginTop: "40px", marginBottom: "20px" }}>Achraf Hakimi - Last 4 Matches with Morocco</h2>
+
+            <h1 id="head">Last 10 Matches</h1>
+            <h2>Achraf Hakimi - Last 4 Matches with Morocco</h2>
             <div className='table-with-national-team'>
-            <table style={{ width: "100%", borderCollapse: "collapse", backgroundColor: "#fff", color: "#333", boxShadow: "0 0 5px rgba(0, 0, 0, 0.1)" }}>
-                <thead>
-                    <tr style={{ backgroundColor: "#340303", color: "white" }}>
-                        <th style={{ padding: "5px", border: "1px solid #ddd" }}>Match</th>
-                        <th style={{ padding: "5px", border: "1px solid #ddd" }}>Date</th>
-                        <th style={{ padding: "5px", border: "1px solid #ddd" }}>Goals</th>
-                        <th style={{ padding: "5px", border: "1px solid #ddd" }}>Assists</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>Morocco vs Team A</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>2023-09-01</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>1</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>0</td>
-                    </tr>
-                    <tr>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>Morocco vs Team B</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>2023-09-08</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>0</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>1</td>
-                    </tr>
-                    <tr>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>Morocco vs Team C</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>2023-09-15</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>0</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>0</td>
-                    </tr>
-                    <tr>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>Morocco vs Team D</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>2023-09-22</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>1</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>1</td>
-                    </tr>
-                </tbody>
-            </table>
+                <table className='Table'>
+                    <thead>
+                        <tr>
+                            <th>Match</th>
+                            <th>Date</th>
+                            <th>Goals</th>
+                            <th>Assists</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Morocco vs Team A</td>
+                            <td>2023-09-01</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Morocco vs Team B</td>
+                            <td>2023-09-08</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Morocco vs Team C</td>
+                            <td>2023-09-15</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Morocco vs Team D</td>
+                            <td>2023-09-22</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <h2 style={{ textAlign: "center", marginTop: "40px", marginBottom: "20px" }}>Achraf Hakimi - Last 4 Matches with PSG</h2>
-            <table style={{ width: "100%", borderCollapse: "collapse", backgroundColor: "#fff", color: "#333", boxShadow: "0 0 5px rgba(0, 0, 0, 0.1)" }}>
+            <h2>Achraf Hakimi - Last 4 Matches with PSG</h2>
+            <table>
                 <thead>
-                    <tr style={{ backgroundColor: "#340303", color: "white" }}>
-                        <th style={{ padding: "5px", border: "1px solid #ddd" }}>Match</th>
-                        <th style={{ padding: "5px", border: "1px solid #ddd" }}>Date</th>
-                        <th style={{ padding: "5px", border: "1px solid #ddd" }}>Goals</th>
-                        <th style={{ padding: "5px", border: "1px solid #ddd" }}>Assists</th>
+                    <tr>
+                        <th>Match</th>
+                        <th>Date</th>
+                        <th>Goals</th>
+                        <th>Assists</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>PSG vs Team A</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>2023-09-03</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>0</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>1</td>
+                        <td>PSG vs Team A</td>
+                        <td>2023-09-03</td>
+                        <td>0</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>PSG vs Team B</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>2023-09-10</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>1</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>0</td>
+                        <td>PSG vs Team B</td>
+                        <td>2023-09-10</td>
+                        <td>1</td>
+                        <td>0</td>
                     </tr>
                     <tr>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>PSG vs Team C</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>2023-09-17</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>0</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>1</td>
+                        <td>PSG vs Team C</td>
+                        <td>2023-09-17</td>
+                        <td>0</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>PSG vs Team D</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>2023-09-24</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>1</td>
-                        <td style={{ padding: "5px", border: "1px solid #ddd" }}>0</td>
+                        <td>PSG vs Team D</td>
+                        <td>2023-09-24</td>
+                        <td>1</td>
+                        <td>0</td>
                     </tr>
                 </tbody>
             </table>
+            <ChatBotComponent />
         </div>
     );
 };

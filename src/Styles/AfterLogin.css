@@ -37,20 +37,22 @@ body {
     }
 
     .team {
-        flex-direction: column; /* Stack elements vertically */
+        flex-direction:row; /* Stack elements vertically */
         gap: 10px; /* Reduce spacing */
         padding: 15px;
-        margin-left: 0; /* Remove negative margin */
+        margin-left: -80px; /* Remove negative margin */
         text-align: center; /* Center-align text */
+
     }
 
     .team img {
         max-width: 80%; /* Ensure images scale properly */
+        margin-left:10px;
     }
 
     .team h4 {
         font-size: 30px; /* Reduce font size */
-        margin-left: 0;
+        margin-left: -70px;
         margin-right: 0;
     }
 

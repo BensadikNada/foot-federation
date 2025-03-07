@@ -119,7 +119,9 @@
     margin-left: 0; /* Remove left margin for better centering */
     padding: 15px;
   }
-
+.player-list{
+  margin-left: 15%;
+}
   .player-card {
     width: 180px; /* Slightly reduce card width */
     padding: 10px;
@@ -129,7 +131,13 @@
     width: 100px;
     height: 100px;
   }
-
+  .player-instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-left: 25%;
+}
   .player-instructions li {
     width: 90%; /* Make instructions more flexible */
     font-size: 1rem;
@@ -137,11 +145,32 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+.player-list {
+  display: flex
+;
+  flex-wrap: wrap;
+  margin-left: 25%;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+}
+
 @media screen and (max-width: 768px) {
   .player-list {
     gap: 15px;
   }
-
+  .player-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 22%;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
   .player-card {
     width: 160px;
     padding: 8px;

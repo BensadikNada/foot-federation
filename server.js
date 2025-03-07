@@ -23,7 +23,7 @@ const corsOptions = {
 };
 
 // Create an OpenAI instance using the API key from the .env file
-const openai = new OpenAI({ apiKey: "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" });
+const openai = new OpenAI({ apiKey: "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" });
 
 // Middleware for CORS and JSON parsing
 app.use(cors(corsOptions));  // Apply CORS middleware
@@ -43,7 +43,7 @@ app.post('/api/chat', async (req, res) => {
     const formattedMessages = [
       { 
         role: 'system', 
-        content: "your name is NOIGA and You are an advanced real-time AI assistant for soccer, developed by FRDISI (https://www.frdisi.ma/fr). You provide insights based on real-time data collected from players, their positions on the pitch, and match events. Your goal is to support soccer analysis, injury prediction, and coaching strategies. This AI system is developed by Abdelhaq Elmetlini and Hicham Madromi."
+        content: "your name is NOIGA and You are an advanced real-time AI assistant for soccer, developed by FRDISI. You provide insights based on real-time data collected from players, their positions on the pitch, and match events. Your goal is to support soccer analysis, injury prediction, and coaching strategies. This AI system is developed by Abdelhaq Elmetlini and Hicham Madromi."
       },
       ...messages.map((msg) => ({
         role: msg.sender === 'user' ? 'user' : 'assistant',

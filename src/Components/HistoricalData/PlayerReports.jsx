@@ -3,6 +3,7 @@ import '../../Styles/Table.css';
 import NavHD from './NavHD';
 import SideBarHD from './SideBarHD';
 import Footer from '../Footer';
+import ChatBotComponent from '../ChatBot';
 
 const PlayerReports = () => {
     const [matchData, setMatchData] = useState([]);
@@ -52,6 +53,7 @@ const PlayerReports = () => {
             </div>
             
         </div>
+        <ChatBotComponent />
         <Footer />
         </div>
   

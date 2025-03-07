@@ -40,7 +40,7 @@ function MainRT() {
         });
         return newIndex;
       });
-    }, 4000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, [players]);
@@ -99,8 +99,8 @@ function MainRT() {
               <Link to={`/analise/${p.id}`} className="analyze-link" style={{textDecoration: "none"}}>
               Analyze Performance
               </Link>
-              <Link to={`/analise/${p.id}`} className='last-10-games-link' style={{textDecoration: "none"}}>
-              Laste 10 games
+              <Link to={`/last-10-matches/${p.name}`} className='last-10-games-link' style={{textDecoration: "none"}}>
+              Laste Matches
               </Link>
              
             </div>

@@ -1,0 +1,98 @@
+h1, h2 {
+    color:white;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left:16%;
+    margin-top:5%;
+}
+.Table{
+    margin-left:12%;
+}
+.last10games-container{
+    margin-top: 15%;
+}
+
+.table-with-national-team, table {
+    width: 75%;
+    border-collapse: collapse;
+    background-color: #fff;
+    color: #333;
+    margin-left:20%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+thead tr {
+    background-color: #340303;
+    color: white;
+}
+
+th, td {
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+@media screen and (max-width: 1024px) {
+    table {
+        font-size: 12px !important;
+        width: 70%;
+        margin-left: 28%;
+    }
+    th, td {
+        padding: 4px !important;
+    }
+    h1, h2 {
+        font-size: 18px !important;
+        margin-left:30%;
+        margin-top:50px;
+    }
+}
+@media screen and (max-width: 900px) {
+    table {
+        font-size: 12px !important;
+        width: 65%;
+        margin-left: 33%;
+    }
+    th, td {
+        padding: 4px !important;
+    }
+    h1, h2 {
+        font-size: 18px !important;
+        margin-left:30%;
+        margin-top:30px;
+    }
+}
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 10px !important;
+        width: 65%;
+        margin-left: 32%;
+    }
+    th, td {
+        padding: 3px !important;
+    }
+    h1, h2 {
+        margin-left: 20%;
+        font-size: 14px !important;
+    }
+    #head{
+        margin-top:30%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    table {
+        font-size: 8px !important;
+        width: 65%;
+        margin-left: 33%;
+    }
+    th, td {
+        padding: 2px !important;
+    }
+    h1, h2 {
+        margin-left: 25%;
+        font-size: 12px !important;
+    }
+    #head{
+        margin-top:30%;
+    }
+}

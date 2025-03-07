@@ -94,9 +94,9 @@
 .triangle-red {
     width: 0;
     height: 0;
-    border-left: 16px solid transparent; /* Reduced width */
-    border-right: 16px solid transparent; /* Reduced width */
-    border-bottom: 16px solid rgb(255, 0, 0); /* Reduced height */
+    border-left: 16px solid transparent; 
+    border-right: 16px solid transparent;
+    border-bottom: 16px solid rgb(255, 0, 0); 
     margin-bottom: 15px;
     rotate: 180deg;
 }
@@ -104,42 +104,51 @@
 .triangle-green {
     width: 0;
     height: 0;
-    border-left: 16px solid transparent; /* Reduced width */
-    border-right: 16px solid transparent; /* Reduced width */
-    border-bottom: 16px solid rgb(72, 255, 99); /* Reduced height */
+    border-left: 16px solid transparent; 
+    border-right: 16px solid transparent; 
+    border-bottom: 16px solid rgb(72, 255, 99); 
 }
 @media (max-width: 768px) {
     .remplacement {
-        flex-direction: column; /* Stack the elements vertically */
-        margin-left: 0; /* Remove the left margin */
-        margin-top: 80px; /* Reduce top margin for smaller screens */
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        margin-top: 80px;
+        padding-bottom: 39px;
+        padding-top: 145px;
+        margin-left:-25%;
+        padding-left: 690px; 
+        width: 100vw;
+        box-sizing: border-box; 
+        max-width: 100vw; 
     }
-
+    
     .goalKeeper {
-        padding: 10px; /* Reduce padding */
-        margin-bottom: 20px; /* Add spacing between goalkeepers */
+        flex: 0 0 auto; 
+        width: 200px;
     }
 
     .goalKeeper h3 {
-        font-size: 20px; /* Smaller font size for titles */
-        padding: 10px 5px; /* Adjust padding */
+        font-size: 20px;
+        padding: 10px 5px;
     }
 
     .goalKeeper-card {
-        width: 100%; /* Allow the cards to stretch to full width */
-        margin-bottom: 10px; /* Adjust bottom margin */
+        width: 100%; /* Allows stretching */
+        margin-bottom: 10px;
     }
 
     .goalKeeper-info {
-        font-size: 14px; /* Smaller font size for text */
+        font-size: 14px;
     }
 
     .goalKeeper-name {
-        font-size: 16px; /* Smaller font size for name */
+        font-size: 16px;
     }
 
     .goalKeeper-image-container {
-        width: 80px; /* Smaller image container */
+        width: 80px;
         height: 80px;
     }
 
@@ -150,19 +159,23 @@
     }
 
     .triangle {
-        flex-direction: column; /* Stack triangles vertically */
+        flex-direction: column;
     }
 
     .triangle-red, .triangle-green {
         width: 0;
         height: 0;
-        border-left: 12px solid transparent; /* Smaller triangle width */
-        border-right: 12px solid transparent; /* Smaller triangle width */
-        border-bottom: 12px solid rgb(255, 0, 0); /* Smaller triangle height */
-        margin-bottom: 10px; /* Reduce space between triangles */
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid;
+        margin-bottom: 10px;
+    }
+
+    .triangle-red {
+        border-bottom-color: rgb(255, 0, 0);
     }
 
     .triangle-green {
-        border-bottom-color: rgb(72, 255, 99); /* Keep the green color */
+        border-bottom-color: rgb(72, 255, 99);
     }
 }

@@ -14,6 +14,8 @@ function SideBarRT() {
             setActive('Injery');
         }  else if (location.pathname === '/suivi-position-joueur') {
             setActive('suiviPositionJoueur');
+        }  else if (location.pathname === '/last-10-matches/:playerName') {
+            setActive('suiviPositionJoueur');
         }else {
             setActive('');
         }

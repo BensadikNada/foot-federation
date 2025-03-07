@@ -12,19 +12,24 @@ import {
   Filler,
   Tooltip,
   Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale,
 } from 'chart.js';
-import { Radar } from 'react-chartjs-2';
+import { Radar, Bar, Line } from 'react-chartjs-2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeartPulse, faBrain, faLungs } from '@fortawesome/free-solid-svg-icons';
 import Stats from '../Components/RealTime/Stats';
+import { Pie } from 'react-chartjs-2';
+import { ArcElement } from 'chart.js';
+import ChatBotComponent from '../Components/ChatBot';
 
-// Register Chart.js components
-ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
+ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend, BarElement, CategoryScale, LinearScale);
+ChartJS.register(ArcElement);
 function Analise() {
   const { playerId } = useParams();
-  const [activeTab, setActiveTab] = useState('heartRate'); // ✅ Fix: Lift state up
-
+  const [activeTab, setActiveTab] = useState('heartRate'); 
   useEffect(() => {
     document.body.style.backgroundColor = 'white';
     return () => {
@@ -48,7 +53,74 @@ function Analise() {
       },
     ],
   };
-
+  const [barData, setBarData] = useState({
+    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+    datasets: [
+      {
+        label: 'Sales',
+        data: [65, 59, 80, 81, 56, 55],
+        backgroundColor: 'rgba(75,192,192,0.4)',
+        borderColor: 'rgba(75,192,192,1)',
+        borderWidth: 1,
+      },
+    ],
+  });
+  
+  const barOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+  };
+  const [lineData, setLineData] = useState({
+    labels: ['Match 1', 'Match 2', 'Match 3', 'Match 4', 'Match 5', 'Match 6'],
+    datasets: [
+      {
+        label: 'Goals Scored',
+        data: [1, 2, 0, 3, 1, 2],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1,
+        fill: true,
+      },
+      {
+        label: 'Assists',
+        data: [0, 1, 1, 2, 1, 0],
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1,
+        fill: true,
+      },
+    ],
+  });
+  
+  const lineOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+  };
+  const [pieData, setPieData] = useState({
+    labels: ['Wins', 'Losses', 'Draws'],
+    datasets: [
+      {
+        label: 'Match Results',
+        data: [10, 5, 3],
+        backgroundColor: [
+          'rgba(75, 192, 192, 0.6)',
+          'rgba(255, 99, 132, 0.6)',
+          'rgba(255, 206, 86, 0.6)',
+        ],
+        borderColor: [
+          'rgba(75, 192, 192, 1)',
+          'rgba(255, 99, 132, 1)',
+          'rgba(255, 206, 86, 1)',
+        ],
+        borderWidth: 1,
+      },
+    ],
+  });
+  
+  const pieOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+  };
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -136,23 +208,41 @@ function Analise() {
 
         <div
           style={{
-            maxWidth: '600px',
-            margin: '20px auto',
-            padding: '20px',
-            background: '#f9f9f9',
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: '20px',
+            padding: '50px', 
             borderRadius: '10px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
           }}
+          className='graphs'
         >
           {/* Pass activeTab as a prop */}
           <SideBar activeTab={activeTab} />
           <SideBarRT />
           <NavRT />
-          <div style={{ height: '400px' }}>
+       
+
+        
+
+          <div style={{ flex: '1 1 300px', height: '300px' }} >
             <Radar data={aggregatedData} options={options} />
           </div>
+          <div style={{ flex: '1 1 300px', height: '300px' }}>
+            <Bar data={barData} options={barOptions} />
+          </div>
+          <div style={{ flex: '1 1 300px', height: '300px' }}>
+            <Line data={lineData} options={lineOptions} />
+          </div>
+          <div style={{ flex: '1 1 300px', height: '300px' }}>
+            <Pie data={pieData} options={pieOptions} />
+          </div>
+
+          
         </div>
       </div>
+ 
+      <ChatBotComponent/>
     </div>
   );
 }

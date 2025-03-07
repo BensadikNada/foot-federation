@@ -3,6 +3,7 @@ import Footer from '../Components/Footer';
 import NavHD from '../Components/HistoricalData/NavHD';
 import SideBarHD from '../Components/HistoricalData/SideBarHD';
 import HistoriqueDataTable from '../Components/HistoricalData/HistoriqueDataTable';
+import ChatBotComponent from '../Components/ChatBot';
 
 function HistoricalData() {
   return (
@@ -10,6 +11,7 @@ function HistoricalData() {
       <NavHD />
       <SideBarHD />
       <HistoriqueDataTable/>
+      <ChatBotComponent />
       <Footer />
     </div>
   );

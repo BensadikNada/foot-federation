@@ -1,45 +1,55 @@
 .field {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* background-color: #3403034c; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background-color: #3403034c; */
 }
 
 .soccer-field {
-    max-width: 100%;
-    height: 75%;
-    margin-left: 250px;
-    margin-top: 100px;
-    border: 5px solid #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+  height: 75%;
+  margin-left: 250px;
+  margin-top: 100px;
+  border: 5px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 1024px) {
-    .soccer-field {
-      margin-left: 100px;
-      height: 70%;
-    }
+  .soccer-field {
+    margin-left: 235px;
+    height: 70%;
+    width: 725px;
   }
-  
-  @media screen and (max-width: 768px) {
-    .field {
-      flex-direction: column;
-      height: auto;
-      padding: 20px;
-    }
-  
-    .soccer-field {
-      margin-left: 0;
-      height: 60%;
-      width: 90%;
-    }
+}
+
+@media screen and (max-width: 768px) {
+  .field {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
   }
-  
-  @media screen and (max-width: 480px) {
-    .soccer-field {
-      height: 50%;
-      width: 100%;
-      border-width: 3px;
-    }
+
+  .soccer-field {
+    margin-left: 200px;
+    height: 60%;
+    width: 72%;
+    margin-bottom: 5%;
+}
+}
+@media screen and (max-width: 600px) {
+  .soccer-field {
+    margin-left: 140px;
+    height: 60%;
+    width: 80%;
+    margin-bottom: 19%;
+}
+}
+@media screen and (max-width: 500px) {
+  .soccer-field {
+    margin-top:30%;
+    margin-left: 140px;
+    height: 60%;
+    width: 80%;
+    margin-bottom: 26%;
   }
-  
+}

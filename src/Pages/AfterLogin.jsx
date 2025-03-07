@@ -4,6 +4,7 @@ import NavigationButtons from '../Components/NavigationButtons';
 import '../Styles/AfterLogin.css';
 import ChatBot from '../Components/ChatBot'
 import CountUp from '../Components/CountUp';  // Ensure the correct path
+import FooterAfterLogin from '../Components/footerAfterlogin';
 function AfterLogin() {
   return (
     <div>
@@ -20,7 +21,7 @@ function AfterLogin() {
       </div>
       </div>
       <NavigationButtons />
-      <ChatBot/>
+      <FooterAfterLogin />
     </div>
   );
 }

@@ -32,8 +32,8 @@ canvas {
 }
 
 .center {
-  margin-top: 20%;
-  margin-left: 10%;
+  margin-left: 31%;
+  width: 60%;
 }
 
 /* Title Styling */
@@ -220,15 +220,15 @@ h3::after {
 }
 
 @media screen and (max-width: 768px) {
-  .chart-container {
-      width: 85vw;
+  /* .chart-container {
+      width: 250px;
       height: 70vh;
-      padding: 10px;
-  }
+      padding: 20px;
+  } */
 
   .center {
       margin-top: 15%;
-      margin-left: 5%;
+      margin-left: 34%;
   }
 
   h3 {
@@ -240,26 +240,36 @@ h3::after {
       width: 60%;
       margin-left: 40%;
   }
-
+  
   .SideBar {
       width: 180px;
   }
 
   .SideBar .toggle-btn {
-      left: -60px;
+      left: -140px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .o2-level-container {
+      width: 150px;
+      height: 150px;
+      box-shadow: 0px 0px 15px rgba(0, 122, 255, 0.5);
+  }
+  .graphs{
+    margin-left:10%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .chart-container {
-      width: 95vw;
+  /* .chart-container {
+      width: 200px;
       height: 60vh;
-      padding: 8px;
-  }
+      padding: 18px;
+  } */
 
   .center {
       margin-top: 10%;
-      margin-left: 2%;
+      margin-left: 40%;
   }
 
   h3 {
@@ -277,8 +287,10 @@ h3::after {
   }
 
   .SideBar .toggle-btn {
-      left: -50px;
+      left: -155px;
       width: 30px;
       height: 30px;
   }
 }
+
+

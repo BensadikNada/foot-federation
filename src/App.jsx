@@ -34,7 +34,7 @@ function App() {
         <Route path='/construction' element={<Construction/>}/>
         <Route path='/systeme-remplacement' element={<Remplacement/>}/>
         <Route path='/player-reports' element={<PlayerReports/>}/>
-        <Route path='/last-10-matches' element={<Last10Game/>}/>
+        <Route path='/last-10-matches/:playerName' element={<Last10Game/>}/>
       </Routes>
     </Router>
   );
